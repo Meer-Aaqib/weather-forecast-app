@@ -35,11 +35,11 @@ const fetchData = async () => {
   const city = inputValue.value.trim();
   try {
     if (!city) {
-      throw new Error("enter city name");
+      throw new Error("Enter City Name!");
     }
     const response = await fetch(url + city + apiKey);
     if (!response.ok) {
-      throw new Error("City Not Found");
+      throw new Error("City Not Found!");
     }
     const data = await response.json();
     weatherInfo.style.display = "block";

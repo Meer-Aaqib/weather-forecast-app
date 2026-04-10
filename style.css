@@ -12,12 +12,15 @@
 body {
   background: url(assets/bg/clouds.jpg);
   width: 100%;
-  height: 100vh;
+  min-height: 100dvh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  padding: 40px;
 }
 
 body::before {
@@ -35,8 +38,9 @@ body::before {
 /* END UTILITY  */
 
 .main_container {
-  max-width: 300px;
-  min-height: 496px;
+  width: 100%;
+  max-width: 320px;
+  min-height: 500px;
   z-index: 1;
   background: linear-gradient(
     to top,
@@ -111,12 +115,16 @@ body::before {
 }
 
 .weather_summary_image {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
 }
 
 .weather_summary_info {
   text-align: end;
+}
+
+.temp_text {
+  font-size: 50px;
 }
 
 .weather_condition_container {
@@ -184,18 +192,74 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1;
   text-align: center;
   gap: 15px;
-  margin-top: 25%;
+  margin-top: 70px;
 }
 
 .search_message img {
   width: fit-content;
-  height: 180px;
+  height: 140px;
 }
 
 .error_message {
-  color: rgb(214, 0, 0);
+  color: rgba(255, 80, 80, 0.9);
   font-weight: 400;
+  margin-top: 40px;
 }
 /* END SECTION MESSAGE */
+
+@media (max-width: 480px) {
+  body {
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+
+  .main_container {
+    max-width: 350px;
+    min-height: 600px;
+    padding: 30px 20px;
+  }
+
+  .input_container {
+    margin-bottom: 35px;
+  }
+  .inputBox {
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+  .search_btn span {
+    font-size: 30px;
+  }
+
+  .country_txt {
+    font-size: 20px;
+  }
+
+  .date_txt {
+    font-size: 16px;
+  }
+
+  .weather_summary_container {
+    margin-bottom: 35px;
+  }
+
+  .weather_condition_container {
+    margin-bottom: 40px;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 15px;
+  }
+
+  .humidity_value_text,
+  .wind_value_text {
+    font-size: 16px;
+  }
+
+  .search_message {
+    margin-top: 120px;
+  }
+}
