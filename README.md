@@ -4,7 +4,7 @@ A sleek and responsive weather application that provides real-time meteorologica
 
 ## 🔗 Live Demo
 
-> **Check out the live app here:** [🚀 View Project Live](https://your-username.github.io/your-repo-name/)
+> **Check out the live app here:** [🚀 View Project Live](https://weather-dashboard-by-aaqib.netlify.app)
 
 ## ✨ Key Features
 
